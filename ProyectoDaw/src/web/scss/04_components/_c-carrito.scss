@@ -1,0 +1,52 @@
+.c-carrito{
+    background-color: getColor("blancos",8);
+    height: 700px;
+    width: 1000px;
+    border-radius: getBorderRadius(6);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    &__right{
+        width: 400px;
+        height: 700px;
+        background-color: getColor("blancos",7);
+        border-top-right-radius: getBorderRadius(6);
+        border-bottom-right-radius: getBorderRadius(6);
+        padding-left: getPadding(10);
+        padding-right: getPadding(10);
+    }
+
+    &__descuento{
+        padding-top: getPadding(4);
+        padding-bottom: getPadding(4);
+        padding-left: getPadding(7);
+        background-color: getColor("blancos",8);
+        border-radius: getBorderRadius(3);
+        border: 0;
+    }
+
+    &__titulo{
+        margin-top: getMargin(10);
+        font-size: getFontSize("3XL");
+        font-weight: bold;
+    }
+    
+    &__nombre{
+        font-size: getFontSize("M");
+        font-weight: 700;
+        color: #4a4a4a getColor("grises",1);
+    }
+
+    &__btn{
+        width: 342px;
+    }
+
+    &__cerrar{
+        color: red;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        padding-top: 20px;
+        font-size: getFontSize("2XL")
+    }
+
+}

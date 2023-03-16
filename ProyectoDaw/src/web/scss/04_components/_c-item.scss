@@ -1,0 +1,43 @@
+.c-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: getGap(9);
+
+    &__imagen{
+        width: 100px;
+        height: 100px;
+    }
+
+    &__borrar{
+        border: 0;
+        background-color: transparent;
+        color: getColor("rojos",4);
+        width: bold;
+
+    }
+
+    &__nombre{
+        width: 120px;
+
+        &--pequeño{
+            width: 35px;
+        }
+    }
+
+    &__texto{
+        font-size: getFontSize("M");
+        font-weight: 600;
+        
+        &--pequeño{
+            font-size: getFontSize("XS");
+            font-weight: 100;
+            color: getColor("grises",4);
+        }
+
+    }
+
+    
+
+
+}

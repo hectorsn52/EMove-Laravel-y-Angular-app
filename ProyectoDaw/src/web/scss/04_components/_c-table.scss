@@ -1,0 +1,37 @@
+.c-table{
+    padding: getPadding(10);
+    margin: getMargin(7);
+        
+
+    &__titulos{
+        font-weight: bolder;
+    }
+
+    &__elementos{
+        border-bottom: 1px solid hsla(0, 0%, 50%, .5);
+    }
+
+
+    &__img{
+        height: 30px;
+        width: 30px;
+        padding-left: 10px;  
+    }
+
+    &__img:hover{
+        background-color: getColor("grises", 6);
+    }
+
+    &__item{
+        padding-left: getPadding(7);
+        padding-right: getPadding(7);
+        margin-top: getMargin(7);
+        margin-bottom: getMargin(7);
+
+        &--buttons{
+            gap: getGap(2);
+            display: flex;
+
+        }
+    }
+}

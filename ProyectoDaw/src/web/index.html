@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Grupo</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav position="fixed">
+        <div class="c-header">
+            <div class="l-flex l-flex--align-items-center l-flex--direction-row">
+                <div>
+                    <a href=""><img class="g--width-7" src="assets/img/logo.png"></a>
+                </div>
+
+                <div class="c-header__content">
+                    <div class="l-flex l-flex--direction-row l-flex--align-items-center">
+                        <img class="c-header__search-icon" id="btnBusqueda" class="" src="assets/img/icono-lupa.png">
+                        <input type="search" class="c-header__search" id="busqueda" placeholder="Buscar producto">
+                    </div>
+                </div>
+
+                <div class="l-flex l-flex--direction-row auto l-flex--gap-5">
+                    <img id="btnUsuario" class="c-header__icons" src="assets/img/icono-usuario.png" />
+                    <img id="btnCarrito" class="c-header__icons" src="assets/img/icono-carrito.png"><div id="item-count"></div></img>
+                </div>
+            </div>
+
+            <div id="buttonsNav" class="l-flex l-flex--justify-content-space-around g--padding-vertical-4">
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- apartado del banner -->
+
+    <div id="banner" class="g--margin-vertical-10 g--padding-horizonal-12">
+        <img src="assets/img/banner.png" class="g--width-22">
+    </div>
+
+    <!-- categorias -->
+
+    <div id="titulo" class="l-flex l-flex--justify-content-center g--margin-bottom-6 g--font-size-5XL">
+        <h1 id="seleccion" class="g--padding-horizonal-19">Selecciona la ciudad de destino</h1>
+    </div>
+
+    <div id="contenido"
+        class="l-flex l-flex--wrap l-flex--gap-10 g--padding-horizonal-12 g--padding-vertical-6 l-flex--justify-content-center">
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="c-footer l-flex l-flex--direction-column l-flex--align-items-space-between">
+
+            <div class="l-flex l-flex--justify-content-center l-flex--gap-17">
+                <img class="c-footer__logo" src="assets/img/logo.png" />
+
+                <div class="l-flex l-flex--direction-row l-flex--align-items-center l-flex--gap-5">
+
+                    <img class="c-footer__icons" src="assets/img/instagram.png" alt="Instagram icon"></img>
+                    <img class="c-footer__icons" src="assets/img/facebook.png" alt="Facebook icon"></img>
+                    <img class="c-footer__icons" src="assets/img/twitter.png" alt="Twitter icon"></img>
+                </div>
+            </div>
+
+            <ul class="l-flex l-flex--justify-content-space-evenly g--margin-top-8 g--padding-bottom-1">
+                <li><a href="#" class="c-footer__links">Preguntas frecuentes</a></li>
+                <li><a href="#" class="c-footer__links">Política de privacidad</a></li>
+                <li><a href="#" class="c-footer__links">Términos y condiciones</a></li>
+                <li><a href="#" class="c-footer__links">Aviso legal</a></li>
+                <li><a href="#" class="c-footer__links">Contacto</a></li>
+            </ul>
+
+            <div class="c-footer__bottom">
+                <p class="c-footer__copyright">Emove © 2022 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- dialogo carrito -->
+
+    <dialog id="carrito" class="c-modal">
+        <div class="c-carrito">
+            <div class="l-flex l-flex--direction-row l-flex--align-items-space-between">
+                <div class="l-flex l-flex--direction-column g--width-12 g--padding-horizonal-9 g--padding-bottom-9">
+                    <div class="c-carrito__titulo">
+                        CARRITO
+                        <hr>
+                    </div>
+                    <div id="carritoProductos" class="l-flex l-flex--direction-column l-flex--gap-5" style="height: 500px; overflow: auto;">
+                        
+                    </div>
+
+                    <div class="g--margin-top-auto g--margin-right-auto">
+                        <button id="volver" class="c-button c-button--secundario g--margin-top-auto g--margin-right-auto ">Seguir comprando</button>
+                        <button id="borrarCarrito" class="c-button c-button--terciario g--margin-left-10">Vaciar carrito</button>
+                    </div>
+                    
+
+                </div>
+
+                <div class="c-carrito__right">
+                    <div class="c-carrito__titulo">
+                        RESUMEN
+                        <hr>
+                    </div>
+
+
+                    <div class="g--margin-top-9">
+                        <div
+                            class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-9 g--margin-bottom-9">
+                            <div class="c-carrito__nombre" id="cantidadArticulos"></div>
+                            <div class="c-carrito__nombre" id="precioTotal">0</div>
+                        </div>
+                        <div class="l-flex l-flex--direction-column l-flex--gap-7  g--margin-bottom-12">
+                            <div class="c-carrito__nombre">CÓDIGO DE DESCUENTO</div>
+                            <input type="text" id="campoDescuento"class="c-carrito__descuento" placeholder="Introduce tu codigo">
+                            <button id="btnDescuento"class="c-button c-button--terciario">Aplicar descuento</button>
+                        </div>
+                        <hr>
+                        <div
+                            class="l-flex l-flex--direction-row l-flex--justify-content-space-between g--margin-top-7 g--margin-bottom-9">
+                            <div class="c-carrito__nombre">PRECIO TOTAL</div>
+                            <div id="precioFinal">0</div>
+                        </div>
+                    </div>
+
+                    <button id="btnPagar" class="c-button g--width-8 ">PAGAR</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- tarjeta con detalles de cada producto -->
+
+    <dialog id="detalleProducto" class="c-detail">
+        <div id="contenedorDetalles" class="l-flex l-flex--direction-row">
+        </div>
+    </dialog>
+
+    <!-- apartado de login -->
+
+    <dialog id="login" class="c-modal">
+        <div class="l-flex l-flex--direction-row">
+
+            <!-- parte derecha -->
+
+            <div class="g--background-color-principal-2">
+                <img src="assets/img/tren.png" alt="imagen loggin" height="90%" class="g--width-11">
+            </div>
+
+            <!-- parte izquierda -->
+
+            <div class="c-login">
+                <div id="cerrarLogin" class="c-close g--padding-top-7 g--padding-right-7">&#10005;</div>
+                <div class="g--margin-top-15 g--margin-bottom-9">
+                    <div class="c-login__title">Hola de nuevo</div>
+                    <br>
+                    <div>Bienvenido, te echábamos de menos</div>
+                </div>
+
+
+                <form action="" class="l-flex l-flex--direction-column l-flex--align-items-center">
+                    <input type="text" id="user" name="usuario" class="c-login__datos" placeholder="Nombre de usuario">
+                    <input type="password" id="password" name="contraseña" class="c-login__datos" placeholder="Contraseña">
+                </form>
+
+                <button class="c-button c-login__iniciar" id="btnInicioSesion">Inciar sesión</button>
+
+
+                <hr class="g--margin-left-14 g--margin-right-14">
+
+
+                <div
+                    class="l-flex l-flex--direction-row l-flex--justify-content-space-around g--margin-horizonal-14 g--margin-top-7 g--margin-bottom-15">
+                    <div class="c-login__icon">
+                        <img src="assets/img/iconoMac.png" alt="logo manzanita">
+                    </div>
+                    <div class="c-login__icon">
+                        <img src="assets/img/iconoGoogle.png" alt="logo google">
+                    </div>
+                    <div class="c-login__icon">
+                        <img src="assets/img/iconoFacebook.png" alt="logo facebook">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </dialog>
+
+    <!-- apartado para pagar con tarjeta -->
+
+    <dialog id="pago" class="c-modal">
+
+        <div class='c-pago'>
+            <div class='g--margin-top-4 g--width-22'>
+                <div class="l-flex l-flex--justify-content-center g--margin-top-5 g--width-22">
+                    PANTALLA PAGO
+                </div>
+                <hr>
+                <div class="g--padding-bottom-4">
+                    <img src='./assets/img/tarjetas.png' height='50' width="80"></img>
+                </div>
+                <!-- <form id="payment-form"> -->
+                    <div>
+                        <div class=" g--font-size-L">Número de tarjeta</div>
+                        <input class='c-pago__input' id="card-number" placeholder="xxxx xxxx xxxx xxxx"></input>
+                    </div>
+                    <div class=" l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                        <div>
+                            <div class="g--font-size-L">Fecha caducidad</div>
+                            <input class='c-pago__input' id="expiry-date" placeholder="MM/YY"></input>
+                        </div>
+                        <div>
+                            <div class="g--font-size-L">CVC/CVV</div>
+                            <input class='c-pago__input' id="cvv" placeholder="3 dígitos"></input>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="g--font-size-L">Nombre titular</div>
+                        <input class='c-pago__input' id="cardholder" placeholder="Jonh Doe"></input>
+                    </div>
+               
+                    <div class="g--margin-top-4 l-flex l-flex--direction-row l-flex--justify-content-space-between">
+                        <button class="c-pago__boton c-pago__boton--negativo">Cancelar</button>
+                        <button class="c-pago__boton c-pago__boton--positivo" value="pagar">Aceptar</button>
+                    </div>
+                <!-- </form> -->
+            </div>
+        </div>
+    </dialog>
+
+    <!-- historial de carritos -->
+
+    <dialog id="historialCarritos" class="c-modal c-modal--historial">
+        <div class="l-flex l-flex--direction-column" style="height: 600px; overflow: auto;">
+        <div id="cerrarHistorial" class="c-close g--padding-top-7 g--margin-right-12">&#10005;</div>
+        <table id="tablaHistorial"class="c-table">
+            
+        </table>
+        </div>
+        <div class="l-flex l-flex--direction-column">
+        <div class="g--margin-top-auto g--margin-left-auto g--padding-8">
+            <a href=""><div class="c-button c-button--secundario" id="cierraSesion"> Cerrar sesión</div></a>
+        </div>
+    </div>
+    </dialog>
+
+    <script src="./js/carrito.js"></script>
+    <script src="./js/main.js"> </script>
+    <script src="./js/categories.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/historial.js"> </script>
+    <script src="./js/busqueda.js"> </script>
+    <script src="./js/detail.js"></script>
+    <script src="./js/articulo.js"></script>
+    <script src="./js/payment-form.js"></script>
+</body>
+
+</html>

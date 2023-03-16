@@ -1,0 +1,35 @@
+.c-login{
+    text-align: center;
+    width: 500px;
+
+    &__title{
+        font-weight: bolder;
+        font-size: getFontSize("3XL")
+    }
+
+    &__datos{
+        padding: getPadding(6);
+        width: 250px;
+        border-radius: getBorderRadius(4);
+        background-color: getColor("blancos",2);
+        border: 0;
+        margin-top: getMargin(4);
+    }
+
+
+
+    &__icon{
+        height: 50px;
+        width: 50px;
+    }
+
+    // cambiar si o si
+    &__iniciar{
+        margin-top: 15px;
+        width: 282px;
+        margin-bottom: 15px;
+    }
+
+
+
+}

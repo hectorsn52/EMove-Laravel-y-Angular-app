@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "63ceda77e76ed7e1cfcd2969"
+  },
+  "codigo": "Raquel",
+  "descuento": 10
+},{
+  "_id": {
+    "$oid": "63ceda89e76ed7e1cfcd296b"
+  },
+  "codigo": "Hector",
+  "descuento": 20
+},{
+  "_id": {
+    "$oid": "63ceda90e76ed7e1cfcd296d"
+  },
+  "codigo": "Alvaro",
+  "descuento": 30
+},{
+  "_id": {
+    "$oid": "63ceda97e76ed7e1cfcd296f"
+  },
+  "codigo": "Daniel",
+  "descuento": 40
+},{
+  "_id": {
+    "$oid": "63ceda9be76ed7e1cfcd2971"
+  },
+  "codigo": "Ivan",
+  "descuento": 50
+}]

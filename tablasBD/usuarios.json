@@ -1,0 +1,9 @@
+[{
+  "_id": 1,
+  "nombre": "Admin",
+  "password": "root"
+},{
+  "_id": 2,
+  "nombre": "User",
+  "password": "root"
+}]
